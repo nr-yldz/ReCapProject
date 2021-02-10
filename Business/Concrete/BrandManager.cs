@@ -28,6 +28,11 @@ namespace Business.Concrete
             }
         }
 
+        public IEnumerable<object> GetCarsByBrandId(int v)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Delete(Brand brand)
         {
             _brandDal.Delete(brand);
