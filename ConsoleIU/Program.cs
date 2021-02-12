@@ -14,25 +14,25 @@ namespace ConsoleUI
             //BrandManager brandManager = new BrandManager(new EfBrandDal());
             //ColorManager colorManager = new ColorManager(new EfColorDal());
            
-            foreach (var carDto in carManager.GetCarDetails())
+            foreach (var car in carManager.GetCarDetails())
             {
-                Console.WriteLine(carDto.ColorName+ "  " + carDto.BrandName );
+                Console.WriteLine(car.Id+" "+car.ColorName+" "+car.BrandName +" "+ car.DailyPrice);
             }
 
 
-           // Console.WriteLine("------------------------------------");
+           Console.WriteLine("------------------------------------");
           
-           // //foreach (var brand in brandManager.GetAll())
+           //foreach (var brand in brandManager.GetAll())
            // {
            //     Console.WriteLine(brand.BrandId + "  " + brand.BrandName);
            // }
 
            // Console.WriteLine("------------------------------------");
 
-           //// foreach (var color in colorManager.GetAll())
+           // foreach (var color in colorManager.GetAll())
            // {
-           //     Console.WriteLine(color.ColorId + color.ColorName);
-           // }
+           //    Console.WriteLine(color.ColorId + color.ColorName);
+           //}
 
 
         }

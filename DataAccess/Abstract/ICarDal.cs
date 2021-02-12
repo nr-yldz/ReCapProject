@@ -8,10 +8,8 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface ICarDal:IEntityRepository<Car>
+    public interface ICarDal : IEntityRepository<Car>
     {
         List<CarDetailDto> GetCarDetails();
-        new List<Car> GetAll(Expression<Func<Car, bool>> filter = null);
-        void Delete(Car car);
     }
 }
