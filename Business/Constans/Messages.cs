@@ -23,6 +23,6 @@ namespace Business.Constans
         public static string AddedColor = "Renk eklendi";
         public static string DeletedColor = "Renk  silindi";
         public static string UpdatedColor = "Renk  güncellendi";
-        internal static string MaintenanceTime= "Sistem bakımda";
+        public static string MaintenanceTime= "Sistem bakımda";
     }
 }
