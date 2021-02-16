@@ -20,9 +20,12 @@ namespace Business.Constans
         public static string BrandLenghtInvalid = "Lütfen marka isminin uzunluğunu 2 karakterden fazla giriniz";
 
         
-        public static string AddedColor = "Renk eklendi";
-        public static string DeletedColor = "Renk  silindi";
-        public static string UpdatedColor = "Renk  güncellendi";
+        public static string ColorAdded = "Renk eklendi";
+        public static string ColorDeleted = "Renk  silindi";
+        public static string ColorUpdated = "Renk  güncellendi";
         public static string MaintenanceTime= "Sistem bakımda";
+
+        public static string RentalNotReturned = "Araç iade edilmedi";
+        public static string RentalCar = "Araç kiralandı";
     }
 }

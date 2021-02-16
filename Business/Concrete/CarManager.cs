@@ -38,7 +38,7 @@ namespace Business.Concrete
         public IResult Delete(Car car)
         {
             _carDal.Delete(car);
-            return new SuccessResult();
+            return new SuccessResult(Messages.CarDeleted);
 
         }
 
@@ -84,12 +84,12 @@ namespace Business.Concrete
             if (car.DailyPrice > 0)
             {
                 _carDal.Update(car);
-                return new SuccessResult();
+                return new SuccessResult(Messages.CarUpdated);
 
             }
             else
             {
-                return new ErrorResult($"Lütfen günlük fiyat kısmını 0'dan büyük giriniz");
+                return new ErrorResult(Messages.CarDailyPriceInvalid);
             }
         }
     }
