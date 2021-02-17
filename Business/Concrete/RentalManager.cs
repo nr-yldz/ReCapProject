@@ -29,7 +29,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.RentalCar);
         }
 
-        public IResult Deleted(Rental rental)
+        public IResult Delete(Rental rental)
         {
             _rentalDal.Delete(rental);
             return new SuccessResult();
@@ -45,7 +45,7 @@ namespace Business.Concrete
             return new SuccessDataResult<Rental>(_rentalDal.Get(b => b.RentalId == rentalId));
         }
 
-        public IResult Updated(Rental rental)
+        public IResult Update(Rental rental)
         {
             _rentalDal.Update(rental);
             return new SuccessResult();

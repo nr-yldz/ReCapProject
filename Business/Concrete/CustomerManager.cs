@@ -21,7 +21,7 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        public IResult Deleted(Customer customer)
+        public IResult Delete(Customer customer)
         {
             _customerDal.Delete(customer);
             return new SuccessResult();
@@ -37,7 +37,7 @@ namespace Business.Concrete
             return new SuccessDataResult<Customer>(_customerDal.Get(b => b.CustomerId == customerId));
         }
 
-        public IResult Updated(Customer customer)
+        public IResult Update(Customer customer)
         {
             _customerDal.Update(customer);
             return new SuccessResult();
