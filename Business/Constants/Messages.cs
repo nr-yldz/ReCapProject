@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Business.Constans
+namespace Business.Constants
 {
     public static class Messages
     {
@@ -27,5 +27,7 @@ namespace Business.Constans
 
         public static string RentalNotReturned = "Araç iade edilmedi";
         public static string RentalCar = "Araç kiralandı";
+        public static string CarImageLimitExceeded= "5'ten fazla resim eklenemez";
+        internal static string FailAddedImageLimit = "Limit Aşıldı";
     }
 }
