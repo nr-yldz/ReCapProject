@@ -1,6 +1,7 @@
 ﻿using Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -28,6 +29,7 @@ namespace Business.Constants
         public static string RentalNotReturned = "Araç iade edilmedi";
         public static string RentalCar = "Araç kiralandı";
         public static string CarImageLimitExceeded= "5'ten fazla resim eklenemez";
-        internal static string FailAddedImageLimit = "Limit Aşıldı";
+        public static string FailAddedImageLimit = "Limit Aşıldı";
+        public static string AuthorizationDenied="Yetkiniz yok";
     }
 }
