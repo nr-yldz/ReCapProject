@@ -27,7 +27,7 @@ namespace Business.Concrete
         }
         [PerformanceAspect(1)]
         [SecuredOperation("car.add,admin")]
-        [ValidationAspect(typeof(CarValidator))]
+       [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             _carDal.Add(car);
@@ -54,10 +54,10 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CarDeleted);
 
         }
-        [CacheAspect]
+       // [CacheAspect]
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour == 23)
+            if (DateTime.Now.Hour == 1)
             {
                 return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
 
@@ -71,8 +71,8 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.DailyPrice >= min && c.DailyPrice <= max));
 
         }
-        [CacheAspect]
-        [PerformanceAspect(1)]
+        //[CacheAspect]
+        //[PerformanceAspect(1)]
         public IDataResult<Car> GetById(int id)
         {
             return new SuccessDataResult<Car>(_carDal.Get(c => c.Id == id));
@@ -82,9 +82,9 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
         }
-        [SecuredOperation("car.update,admin")]
+        //[SecuredOperation("car.update,admin")]
         [ValidationAspect(typeof(CarValidator))]
-        [CacheRemoveAspect("ICarService.Get")]
+       // [CacheRemoveAspect("ICarService.Get")]
         public IResult Update(Car car)
         {
             _carDal.Update(car);
