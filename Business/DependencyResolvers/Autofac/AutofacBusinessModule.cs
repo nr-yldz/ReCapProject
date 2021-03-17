@@ -8,6 +8,7 @@ using Core.Utilities.Security.JWT;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.EntityFramework.Repository;
+using DateAccess.Concrete.EntityFrameWork;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
