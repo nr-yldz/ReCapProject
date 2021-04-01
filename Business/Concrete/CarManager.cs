@@ -92,6 +92,15 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(co => co.ColorId == colorId));
         }
+        
+        public IDataResult<List<CarDetailDto>> GetCarDetailsByBrandAndColor(int brandId, int colorId)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(p => p.BrandId == brandId && p.ColorId == colorId));
+        }
+        public IDataResult<List<CarDetailDto>> GetCarDetailsById(int id)
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c => c.Id == id));
+        }
 
         //[SecuredOperation("car.update,admin")]
         [ValidationAspect(typeof(CarValidator))]
@@ -101,5 +110,7 @@ namespace Business.Concrete
             _carDal.Update(car);
             return new SuccessResult(Messages.CarUpdated);
         }
+
+       
     }
 }
