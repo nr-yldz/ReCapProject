@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework.Repository
 {
     public class EfRentalDal : EfEntityRepositoryBase<Rental, ReCapSqlServerContext>, IRentalDal
     {
-        public List<RentalDetailDto> GetRentalDetails(Expression<Func<Rental, bool>> filter = null)
+        public List<RentalDetailDto> GetRentalDetails(Expression<Func<RentalDetailDto, bool>> filter = null)
         {
             using (ReCapSqlServerContext context = new ReCapSqlServerContext())
             {

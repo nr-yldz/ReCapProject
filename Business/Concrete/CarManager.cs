@@ -26,7 +26,7 @@ namespace Business.Concrete
             _carDal = carDal;
         }
         [PerformanceAspect(1)]
-        [SecuredOperation("car.add,admin")]
+        //[SecuredOperation("car.add,admin")]
        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
@@ -57,7 +57,7 @@ namespace Business.Concrete
        // [CacheAspect]
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour == 1)
+            if (DateTime.Now.Hour == 23)
             {
                 return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
 

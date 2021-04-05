@@ -31,5 +31,12 @@ namespace Business.Constants
         public static string CarImageLimitExceeded= "5'ten fazla resim eklenemez";
         public static string FailAddedImageLimit = "Limit Aşıldı";
         public static string AuthorizationDenied="Yetkiniz yok";
+
+        public static string PaymentAdded = "Kart oluşturuldu";
+        public static string PaymentDeleted = "Kart silindi";
+        public static string PaymentListed = "Kartlar listelendi";
+        public static string PaymentUpdated = "Kartlar güncellendi";
+        public static string CardExists = "Kart mevcut";
+        public static string CardCannotFound = "Kart bulunamadı";
     }
 }
