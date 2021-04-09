@@ -51,7 +51,7 @@ namespace Business.Concrete
 
         public IResult IsCardExist(Payment payment)
         {
-            var result = _paymentDal.Get(c => c.NameOnCard == payment.NameOnCard && c.CardNumber == payment.CardNumber && c.CardCvv == payment.CardCvv);
+            var result = _paymentDal.Get(c => c.NameOnCard == payment.NameOnCard && c.CardNumber == payment.CardNumber && c.CardCvv == payment.CardCvv && c.LastNameOnCard == payment.LastNameOnCard);
             if (result == null)
             {
                 return new ErrorResult(Messages.CardCannotFound);
@@ -64,5 +64,7 @@ namespace Business.Concrete
             _paymentDal.Update(payment);
             return new SuccessResult(Messages.PaymentUpdated);
         }
+
+        
     }
 }

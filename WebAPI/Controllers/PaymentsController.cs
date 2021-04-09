@@ -79,7 +79,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
-        [HttpGet("iscardexist")]
+        [HttpPost("iscardexist")]
         public IActionResult IsCardExist(Payment payment)
         {
             var result = _paymentService.IsCardExist(payment);
