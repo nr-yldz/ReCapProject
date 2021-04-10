@@ -18,3 +18,5 @@
 ![5](https://user-images.githubusercontent.com/77545544/114282175-0e6a3c00-9a4b-11eb-9d7c-a758a4613211.png)
 
 ### Frontend kısmına [buradan](https://github.com/nr-yldz/ReCapProject-frontend) ulaşabilirsiniz.
+
+![linkedin](https://en.m.wikipedia.org/wiki/File:LinkedIn_logo_initials.png)
