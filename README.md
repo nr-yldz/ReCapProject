@@ -20,3 +20,5 @@
 ### Frontend kısmına [buradan](https://github.com/nr-yldz/ReCapProject-frontend) ulaşabilirsiniz.
 
 ### LinkedIn adresim için [tıklayınız](https://www.linkedin.com/in/nafiye-nur-y%C4%B1ld%C4%B1z-21a065190?lipi=urn%3Ali%3Apage%3Amessaging_thread%3BnFQ4RY8GTlKZ0vPnRwWCsw%3D%3D)
+
+### Email: nur.yalcin.a@gmail.com
