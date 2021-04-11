@@ -43,6 +43,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<CustomerDetailDto>>(_customerDal.GetCustomerDetails());
         }
 
+        public IDataResult<List<CustomerDetailDto>> GetCustomersByMail(string email)
+        {
+            return new SuccessDataResult<List<CustomerDetailDto>>(_customerDal.GetCustomerDetails(b => b.Email == email));
+        }
+
         public IResult Update(Customer customer)
         {
             _customerDal.Update(customer);

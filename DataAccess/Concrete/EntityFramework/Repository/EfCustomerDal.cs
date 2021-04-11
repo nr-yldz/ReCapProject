@@ -7,12 +7,13 @@ using System.Text;
 using System.Linq;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Abstract;
+using System.Linq.Expressions;
 
 namespace DateAccess.Concrete.EntityFrameWork
 {
     public class EfCustomerDal : EfEntityRepositoryBase<Customer, ReCapSqlServerContext>, ICustomerDal
     {
-        public List<CustomerDetailDto> GetCustomerDetails()
+        public List<CustomerDetailDto> GetCustomerDetails(Expression<Func<CustomerDetailDto, bool>> filter = null)
         {
             using (ReCapSqlServerContext context = new ReCapSqlServerContext())
             {
